@@ -1,0 +1,23 @@
+<label for="">Nome: </label>
+<input type="text" [(ngModel)] = "employee.name"><br>
+
+<label for="">Salario: </label>
+<input type="text" [(ngModel)] = "employee.salario">
+<br>
+
+<!-- <div *ngIf="salario < 1000">
+<label for="">Bonus: </label>
+<input type="text" [(ngModel)] = "bonus">
+</div> -->
+
+<div [hidden]="employee.salario >= 1000">
+    <label>Bonus</label>
+    <input type="text" [(ngModel)]="employee.bonus"><br>
+</div>
+
+<br>
+
+<button type="button" (click) = "addEmployee($event)"> Adicionar Empregado</button>
+
+
+<!-- Programacao altera o template, para exibir basta usar {{name}} -->
